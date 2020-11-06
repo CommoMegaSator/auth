@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: income
+  labels:
+    env: test
+    app: auth
+    tier: backend
+    owner: CommoMegaSator
+spec:
+  containers:
+    - name: auth
+      image: commomegasator/auth-income:latest
+      ports:
+        - containerPort: 8080
